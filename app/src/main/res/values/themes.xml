@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema global de la app -->
+    <style name="Theme.FoodSafe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Color de la barra de estado -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!-- Color de la nav bar (abajo) -->
+        <item name="android:navigationBarColor">@android:color/black</item>
+
+        <!-- Opcional: color primario, etc. Puedes afinar luego -->
+        <item name="colorPrimary">@android:color/holo_blue_light</item>
+        <item name="colorPrimaryVariant">@android:color/holo_blue_dark</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Necesario para que los componentes Material (BottomNavigationView, etc) no lloren -->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog</item>
+
+        <!-- Esto evita barra superior default de AppCompat -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

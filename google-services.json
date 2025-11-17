@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "645433174529",
+    "project_id": "alimentate-37fbc",
+    "storage_bucket": "alimentate-37fbc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645433174529:android:5e15a127c7b8907367ee00",
+        "android_client_info": {
+          "package_name": "com.example.alimentate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr6vRIzI3RjGLBCXRtR_b3eBOSX2fuIYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
