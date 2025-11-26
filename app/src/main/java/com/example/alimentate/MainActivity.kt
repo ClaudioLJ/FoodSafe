@@ -6,8 +6,9 @@ import androidx.fragment.app.Fragment
 import com.example.alimentate.same.AnalyticsFragment
 import com.example.alimentate.same.DashboardFragment
 import com.example.alimentate.same.MLFragment
-import com.example.foodsafe.R
-import com.example.foodsafe.databinding.ActivityMainBinding
+import com.example.alimentate.R
+import com.example.alimentate.databinding.ActivityMainBinding
+
 
 
 

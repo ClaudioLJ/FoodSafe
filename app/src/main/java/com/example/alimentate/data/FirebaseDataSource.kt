@@ -1,5 +1,6 @@
 package com.example.alimentate.data
 
+
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.channels.awaitClose
@@ -25,8 +26,9 @@ class FirebaseDataSource {
 
                 val reading = SensorReading(
                     tempC = tempValue ?: 0f,
-                    humi  = humValue  ?: 0f,
-                    gas   = gasValue  ?: 0
+                    humiPct  = humValue  ?: 0f,
+                    gasRaw   = gasValue  ?: 0,
+                    tsUnix = System.currentTimeMillis(),
                 )
 
                 trySend(reading)

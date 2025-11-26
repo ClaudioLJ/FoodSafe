@@ -1,6 +1,7 @@
 package com.example.alimentate.same
 
 import android.os.Bundle
+import android.system.Os.bind
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -60,12 +61,12 @@ class MLFragment : Fragment() {
      */
     private fun updateUIFromReading(r: SensorReading) {
         // Ejecutamos la "red neuronal"
-        val pred = SimpleNN.predict(r.tempC, r.humi, r.gas)
+        val pred = SimpleNN.predict(r.tempC, r.humiPct, r.gasRaw)
 
         // Actualizamos la UI
         bind.txtTempLive.text = String.format("Temp: %.1f °C", r.tempC)
-        bind.txtHumiLive.text = String.format("Humedad: %.1f %%", r.humi)
-        bind.txtGasLive.text  = "Gas: ${r.gas}"
+        bind.txtHumiLive.text = String.format("Humedad: %.1f %%", r.humiPct)
+        bind.txtGasLive.text  = "Gas: ${r.gasRaw}"
 
         bind.txtClassLive.text = "Clasificación: ${pred.label}"
 
