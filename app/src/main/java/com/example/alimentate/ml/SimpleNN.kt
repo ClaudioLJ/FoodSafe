@@ -37,7 +37,7 @@ object SimpleNN {
         return FloatArray(logits.size) { i -> exps[i] / sum }
     }
 
-    fun predict(tempC: Float, humi: Float, gas: Int): Prediction {
+    fun predict(tempC: Float, humi: Float, gas: Float): Prediction {
         val t = tempC / 50f      // temp esperada 0-50°C
         val h = humi / 100f      // humedad 0-100%
         val g = gas / 4095f      // lectura ADC ESP32 ~0-4095
