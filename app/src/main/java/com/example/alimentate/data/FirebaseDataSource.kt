@@ -22,12 +22,12 @@ class FirebaseDataSource {
                 // Leemos cada hijo del nodo "sensores"
                 val tempValue = snapshot.child("temperatura").getValue(Float::class.java)
                 val humValue  = snapshot.child("humedad").getValue(Float::class.java)
-                val gasValue  = snapshot.child("gas_raw").getValue(Int::class.java)
+                val gasValue  = snapshot.child("gas_raw").getValue(Float::class.java)
 
                 val reading = SensorReading(
                     tempC = tempValue ?: 0f,
                     humiPct  = humValue  ?: 0f,
-                    gasRaw   = gasValue  ?: 0,
+                    gasRaw   = gasValue  ?: 0f,
                     tsUnix = System.currentTimeMillis(),
                 )
 

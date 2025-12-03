@@ -1,7 +1,6 @@
 package com.example.alimentate.same
 
 import android.os.Bundle
-import android.system.Os.bind
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

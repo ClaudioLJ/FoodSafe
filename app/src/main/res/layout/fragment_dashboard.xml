@@ -1,20 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Estado actual de alimentos"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:id="@+id/txtTempLive"
+        android:text="Temp: --"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+         android:layout_width="match_parent"/>
+
+    <TextView
+        android:id="@+id/txtHumLive"
+        android:text="Hum: --"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/txtGasLive"
+        android:text="Gas: --"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <EditText
+        android:id="@+id/edtNombre"
+        android:hint="Nombre del alimento"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:text="Registrar alimento"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerFoods"
+        android:id="@+id/rvProductos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="16dp"/>
+
 </LinearLayout>

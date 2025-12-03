@@ -20,13 +20,13 @@ class SimDataSource : SensorDataSource {
         val r = SensorReading(
             tempC = Random.nextFloat() * 10f + 5f,    // 5-15 °C
             humiPct = Random.nextFloat() * 30f + 70f, // 70-100 %
-            gasRaw = Random.nextInt(1200, 3200),      // MQ-4 "nivel gas"
+            gasRaw = Random.nextFloat()*30f + 90f,      // MQ-4 "nivel gas"
             tsUnix = System.currentTimeMillis() / 1000
         )
         pushReading(r)
     }
 
-    fun pushManual(temp: Float, hum: Float, gas: Int) {
+    fun pushManual(temp: Float, hum: Float, gas: Float) {
         val r = SensorReading(temp, hum, gas, System.currentTimeMillis() / 1000)
         pushReading(r)
     }
